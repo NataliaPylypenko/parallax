@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Parallax</title>
+	<link rel="stylesheet" href="css/jquery.multiscroll.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<ul id="menu">
+	<li data-menuanchor="first" class=""><a href="#first">First slide</a></li>
+	<li data-menuanchor="second" class="active"><a href="#second">Second slide</a></li>
+	<li data-menuanchor="third" class=""><a href="#third">Third slide</a></li>
+</ul>
+<div id="multiscroll">
+	<div class="ms-left">
+		<div class="ms-section">LEFT 1</div>
+		<div class="ms-section">LEFT 2</div>
+		<div class="ms-section">LEFT 3</div>
+	</div>
+	<div class="ms-right">
+		<div class="ms-section section1"></div>
+		<div class="ms-section section2"></div>
+		<div class="ms-section section3"></div>
+	</div>
+</div>
+	
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/jquery.easings.min.js"></script>
+<script src="js/jquery.multiscroll.min.js"></script>
+<script>
+	$(function(){
+		$('#multiscroll').multiscroll({
+			verticalCentered : true,
+			sectionsColor: ['#000', '#8C0319', '#000'],
+			navigation: true,
+			navigationPosition: 'right',
+			anchors: ['first', 'second', 'third']
+		});
+	});
+</script>
+
+</body>
+</html>
